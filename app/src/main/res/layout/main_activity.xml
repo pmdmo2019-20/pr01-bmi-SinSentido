@@ -47,13 +47,15 @@
             android:id="@+id/btnReset"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/reset"/>
+            android:layout_weight="1"
+            android:text="@string/reset" />
 
         <Button
             android:id="@+id/btnCalculate"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/calculate"/>
+            android:layout_weight="1"
+            android:text="@string/calculate" />
 
     </LinearLayout>
 
