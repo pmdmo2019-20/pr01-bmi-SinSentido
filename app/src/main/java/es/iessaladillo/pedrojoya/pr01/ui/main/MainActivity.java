@@ -54,10 +54,12 @@ public class MainActivity extends AppCompatActivity {
     private void runCalculateButton(){
         if(!isProperWeight()){
             txtWeight.setError(getString(R.string.main_invalid_weight));
+            txtWeight.requestFocus();
         }
 
         else if(!isProperHeight()){
             txtHeight.setError(getText(R.string.main_invalid_height));
+            txtHeight.requestFocus();
         }
 
         else{
