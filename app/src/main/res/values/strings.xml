@@ -10,5 +10,11 @@
     <string name="calculate">Calculate</string>
     <string name="reset">Reset</string>
     <string name="result">BMI: %.1f %s</string>
+    <string name="lowWeight">Low weight</string>
+    <string name="normalWeight">Normal weight</string>
+    <string name="overweight">Overweight</string>
+    <string name="obesityGrade1">Obesity grade I</string>
+    <string name="obesityGrade2">Obesity grade II</string>
+    <string name="obesityGrade3">Obesity grade III</string>
     <!-- TODO -->
 </resources>

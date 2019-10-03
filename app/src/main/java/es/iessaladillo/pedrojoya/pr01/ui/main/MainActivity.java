@@ -65,7 +65,7 @@ public class MainActivity extends AppCompatActivity {
             height = Float.parseFloat(txtHeight.getText().toString());
             bmi = bmiCalculator.calculateBmi(weight, height);
 
-            lblResult.setText(getString(R.string.result, bmi, bmiCalculator.getBmiClasification(bmi)));
+            lblResult.setText(getString(R.string.result, bmi, bmiCategoryText(bmi)));
 
             setBmiImage(bmi);
 
@@ -102,7 +102,7 @@ public class MainActivity extends AppCompatActivity {
         else if(bmiCalculator.getBmiClasification(bmi) == BmiCalculator.BmiClasification.NORMAL_WEIGHT){
             imgBmi.setImageResource(R.drawable.normal_weight);
         }
-        else if(bmiCalculator.getBmiClasification(bmi) == BmiCalculator.BmiClasification.OVERWEIGHT){
+        else if(bmiCalculator.getBmiClasification(bmi) == BmiCalculator.BmiClasification.OVERWWEIGHT){
             imgBmi.setImageResource(R.drawable.overweight);
         }
         else if(bmiCalculator.getBmiClasification(bmi) == BmiCalculator.BmiClasification.OBESITY_GRADE_1){
@@ -114,6 +114,24 @@ public class MainActivity extends AppCompatActivity {
         else if(bmiCalculator.getBmiClasification(bmi) == BmiCalculator.BmiClasification.OBESITY_GRADE_3){
             imgBmi.setImageResource(R.drawable.obesity3);
         }
+    }
+
+    private String bmiCategoryText(Float bmi){
+        switch (bmiCalculator.getBmiClasification(bmi)){
+            case LOW_WEIGHT:
+                return getString(R.string.lowWeight);
+            case NORMAL_WEIGHT:
+                return getString(R.string.normalWeight);
+            case OVERWWEIGHT:
+                return getString(R.string.overweight);
+            case OBESITY_GRADE_1:
+                return getString(R.string.obesityGrade1);
+            case OBESITY_GRADE_2:
+                return getString(R.string.obesityGrade2);
+            case OBESITY_GRADE_3:
+                return getString(R.string.obesityGrade3);
+        }
+        return null;
     }
 
     // TODO
