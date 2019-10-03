@@ -3,18 +3,18 @@
     <string name="empty"></string>
     <string name="weight">Weight</string>
     <string name="weightHint">(kg)</string>
-    <string name="weightError">Invalid weight value</string>
+    <string name="main_invalid_weight">Invalid weight value</string>
     <string name="height">Height</string>
     <string name="heightHint">(m)</string>
-    <string name="heightError">Invalid height value</string>
+    <string name="main_invalid_height">Invalid height value</string>
     <string name="calculate">Calculate</string>
     <string name="reset">Reset</string>
-    <string name="result">BMI: %.1f %s</string>
-    <string name="lowWeight">Low weight</string>
-    <string name="normalWeight">Normal weight</string>
-    <string name="overweight">Overweight</string>
-    <string name="obesityGrade1">Obesity grade I</string>
-    <string name="obesityGrade2">Obesity grade II</string>
-    <string name="obesityGrade3">Obesity grade III</string>
+    <string name="main_bmi">BMI: %.1f %s</string>
+    <string name="main_lowWeight">Low weight</string>
+    <string name="main_normalWeight">Normal weight</string>
+    <string name="main_overweight">Overweight</string>
+    <string name="main_obesityGrade1">Obesity grade I</string>
+    <string name="main_obesityGrade2">Obesity grade II</string>
+    <string name="main_obesityGrade3">Obesity grade III</string>
     <!-- TODO -->
 </resources>

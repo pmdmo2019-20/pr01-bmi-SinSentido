@@ -53,11 +53,11 @@ public class MainActivity extends AppCompatActivity {
 
     private void runCalculateButton(){
         if(!isProperWeight()){
-            txtWeight.setError(getString(R.string.weightError));
+            txtWeight.setError(getString(R.string.main_invalid_weight));
         }
 
         else if(!isProperHeight()){
-            txtHeight.setError(getText(R.string.heightError));
+            txtHeight.setError(getText(R.string.main_invalid_height));
         }
 
         else{
@@ -65,7 +65,7 @@ public class MainActivity extends AppCompatActivity {
             height = Float.parseFloat(txtHeight.getText().toString());
             bmi = bmiCalculator.calculateBmi(weight, height);
 
-            lblResult.setText(getString(R.string.result, bmi, bmiCategoryText(bmi)));
+            lblResult.setText(getString(R.string.main_bmi, bmi, bmiCategoryText(bmi)));
 
             setBmiImage(bmi);
 
@@ -77,7 +77,7 @@ public class MainActivity extends AppCompatActivity {
     * Methods to check the input fields have proper values
     * */
     private boolean isProperWeight(){
-        if(txtWeight.getText().toString().equals("")){
+        if(txtWeight.getText().toString().equals("0") || txtWeight.getText().toString().equals("")){
             return false;
         }
 
@@ -119,17 +119,17 @@ public class MainActivity extends AppCompatActivity {
     private String bmiCategoryText(Float bmi){
         switch (bmiCalculator.getBmiClasification(bmi)){
             case LOW_WEIGHT:
-                return getString(R.string.lowWeight);
+                return getString(R.string.main_lowWeight);
             case NORMAL_WEIGHT:
-                return getString(R.string.normalWeight);
+                return getString(R.string.main_normalWeight);
             case OVERWWEIGHT:
-                return getString(R.string.overweight);
+                return getString(R.string.main_overweight);
             case OBESITY_GRADE_1:
-                return getString(R.string.obesityGrade1);
+                return getString(R.string.main_obesityGrade1);
             case OBESITY_GRADE_2:
-                return getString(R.string.obesityGrade2);
+                return getString(R.string.main_obesityGrade2);
             case OBESITY_GRADE_3:
-                return getString(R.string.obesityGrade3);
+                return getString(R.string.main_obesityGrade3);
         }
         return null;
     }
